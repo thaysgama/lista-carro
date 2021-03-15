@@ -2,8 +2,6 @@ public class Carro {
 
     public static final String VERMELHO = "vermelha";
     public static final String PRETO = "preta";
-    public static final String DIESEL = "diesel";
-    public static final String HIBRIDO = "híbrido - elétrico/gasolina";
 
     // Atributos
 
@@ -14,14 +12,19 @@ public class Carro {
     private Integer quantidadePortas;
     private Integer capacidadeTanque;
     private String combustivel;
+    private Integer anoFabricacao;
+    private String numeroChassi;
     private String arCondicionado;
 
     // Construtor
 
-    public Carro (Integer quantidadePneus, Integer quantidadePortas, Integer capacidadeTanque) {
+    public Carro (Integer quantidadePneus, Integer quantidadePortas, Integer capacidadeTanque, String combustivel, Integer anoFabricacao, String numeroChassi) {
        setQuantidadePneus(quantidadePneus);
        setQuantidadePortas(quantidadePortas);
        setCapacidadeTanque(capacidadeTanque);
+       setCombustivel(combustivel);
+       setAnoFabricacao(anoFabricacao);
+       setNumeroChassi(numeroChassi);
 
     }
 
@@ -92,6 +95,22 @@ public class Carro {
         this.combustivel = combustivel;
     }
 
+    public Integer getAnoFabricacao() {
+        return anoFabricacao;
+    }
+
+    public void setAnoFabricacao(Integer anoFabricacao) {
+        this.anoFabricacao = anoFabricacao;
+    }
+
+    public String getNumeroChassi() {
+        return numeroChassi;
+    }
+
+    public void setNumeroChassi(String numeroChassi) {
+        this.numeroChassi = numeroChassi;
+    }
+
     public String getArCondicionado() {
         return arCondicionado;
     }
@@ -108,6 +127,8 @@ public class Carro {
         System.out.println("Quantidade de portas " + getQuantidadePortas());
         System.out.println("Capacidade do tanque " + getCapacidadeTanque() + "L");
         System.out.println("Combustível " + getCombustivel());
+        System.out.println("Ano de fabrição " + getAnoFabricacao());
+        System.out.println("Número do chassi " + getNumeroChassi());
         System.out.println("Ar Condicionado " + getArCondicionado() + "\n");
     }
 }
