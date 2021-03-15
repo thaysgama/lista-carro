@@ -1,7 +1,9 @@
 public class Carro {
 
-    public static final String VERMELHO = "vermelho";
-    public static final String PRETO = "preto";
+    public static final String VERMELHO = "vermelha";
+    public static final String PRETO = "preta";
+    public static final String DIESEL = "diesel";
+    public static final String HIBRIDO = "híbrido - elétrico/gasolina";
 
     // Atributos
 
@@ -10,8 +12,9 @@ public class Carro {
     private Integer quantidadeParafusos;
     private String cor;
     private Integer quantidadePortas;
-    private String arCondicionado;
     private Integer capacidadeTanque;
+    private String combustivel;
+    private String arCondicionado;
 
     // Construtor
 
@@ -81,6 +84,14 @@ public class Carro {
         this.capacidadeTanque = capacidadeTanque;
     }
 
+    public String getCombustivel() {
+        return combustivel;
+    }
+
+    public void setCombustivel(String combustivel) {
+        this.combustivel = combustivel;
+    }
+
     public String getArCondicionado() {
         return arCondicionado;
     }
@@ -96,6 +107,7 @@ public class Carro {
         System.out.println("Cor " + getCor());
         System.out.println("Quantidade de portas " + getQuantidadePortas());
         System.out.println("Capacidade do tanque " + getCapacidadeTanque() + "L");
+        System.out.println("Combustível " + getCombustivel());
         System.out.println("Ar Condicionado " + getArCondicionado() + "\n");
     }
 }
